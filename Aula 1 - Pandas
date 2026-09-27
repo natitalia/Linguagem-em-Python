@@ -1,0 +1,235 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNVWYxL+TmWc//1jewLUyhs",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/natitalia/Aula_presencial/blob/main/Aula_pandas.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZlOxbpLEvC6p",
+        "outputId": "02288d3f-69f7-4e29-ea35-287fd372b17d"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "     Nome  Idade  Nota\n",
+            "0     Ana     20   8.5\n",
+            "1  Carlos     22   7.0\n",
+            "2    João     19   9.0\n",
+            "3   Maria     25   6.5\n"
+          ]
+        }
+      ],
+      "source": [
+        "# importar a biblioteca pandas\n",
+        "import pandas as pd\n",
+        "\n",
+        "# dicionário (simulando um data freme)\n",
+        "dados = {\n",
+        "    \"Nome\": [\"Ana\", \"Carlos\", \"João\", \"Maria\"],\n",
+        "    \"Idade\": [20,22,19,25],\n",
+        "    \"Nota\": [8.5,7.0,9.0,6.5]\n",
+        "}\n",
+        "\n",
+        "# Converter para a estrutura principal (Dataframe)\n",
+        "df = pd.DataFrame(dados)\n",
+        "\n",
+        "# Exibir o conteudo\n",
+        "print(df)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exibir somente a coluna do nome\n",
+        "print(df[\"Nome\"])\n",
+        "\n",
+        "# Exibir as colunas Nome e Nota\n",
+        "print(df[[\"Nome\",\"Nota\"]])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CUilvQZTyLM9",
+        "outputId": "6b4f4b33-2a97-4493-ac60-6827faa81ddf"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0       Ana\n",
+            "1    Carlos\n",
+            "2      João\n",
+            "3     Maria\n",
+            "Name: Nome, dtype: object\n",
+            "     Nome  Nota\n",
+            "0     Ana   8.5\n",
+            "1  Carlos   7.0\n",
+            "2    João   9.0\n",
+            "3   Maria   6.5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Cálculos nos dados\n",
+        "print(\"Média: \", df[\"Nota\"].mean())\n",
+        "\n",
+        "# Maior nota\n",
+        "print(\"Maior Nota: \", df[\"Nota\"].max())\n",
+        "print(\"Menor Nota: \", df[\"Nota\"].min())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kNpRzgIzzlhS",
+        "outputId": "9c565a06-2604-44e4-bacb-4c6a9a51a3ce"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Média:  7.75\n",
+            "Maior Nota:  9.0\n",
+            "Menor Nota:  6.5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# filtros de dados\n",
+        "aprovados = df[df[\"Nota\"] >= 7]\n",
+        "reprovados = df[df[\"Nota\"] < 7]\n",
+        "\n",
+        "print(aprovados)\n",
+        "print(reprovados)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xxh76Usy1G4i",
+        "outputId": "71040aad-c8cb-4da5-eb91-1cf68d9ee6c4"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "     Nome  Idade  Nota\n",
+            "0     Ana     20   8.5\n",
+            "1  Carlos     22   7.0\n",
+            "2    João     19   9.0\n",
+            "    Nome  Idade  Nota\n",
+            "3  Maria     25   6.5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Filtrar com 2 condições\n",
+        "resultado = df[(df[\"Nota\"] >= 7) & (df[\"Idade\"] >= 20)]\n",
+        "print(resultado)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "X5ot8JW92qUM",
+        "outputId": "abc85d66-b505-4c1e-e23b-2c24093d17e4"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "     Nome  Idade  Nota\n",
+            "0     Ana     20   8.5\n",
+            "1  Carlos     22   7.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Adicionar uma nova coluna\n",
+        "df[\"Situação\"] = \"Reprovado\"\n",
+        "print(df)\n",
+        "\n",
+        "# Alterar o valor na nova coluna\n",
+        "df.loc[df[\"Nota\"] >= 7, \"Situação\"] = \"Aprovado\"\n",
+        "print(df)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XkD3gcfc3u_O",
+        "outputId": "ddfb2361-3d56-4ea0-a419-288d146063e4"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "     Nome  Idade  Nota   Situação\n",
+            "0     Ana     20   8.5  Reprovado\n",
+            "1  Carlos     22   7.0  Reprovado\n",
+            "2    João     19   9.0  Reprovado\n",
+            "3   Maria     25   6.5  Reprovado\n",
+            "     Nome  Idade  Nota   Situação\n",
+            "0     Ana     20   8.5   Aprovado\n",
+            "1  Carlos     22   7.0   Aprovado\n",
+            "2    João     19   9.0   Aprovado\n",
+            "3   Maria     25   6.5  Reprovado\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
