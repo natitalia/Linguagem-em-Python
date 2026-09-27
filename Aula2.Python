@@ -1,0 +1,610 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNx6p+QRyLCj4LrTYCwv+7N",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/natitalia/Linguagem-em-Python/blob/main/Aula2.Python\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MW4UxVf7QQEO",
+        "outputId": "f6d1af11-badd-4b4a-8dcc-71def4b42bb6"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Os valores são iguais!\n"
+          ]
+        }
+      ],
+      "source": [
+        "#operadores lógicos\n",
+        "numero1 = 1\n",
+        "numero2 = 2\n",
+        "\n",
+        "# exemplo de if com operador lógico AND\n",
+        "if numero1 == 1 and numero2 == 2:\n",
+        "  print(\"Os valores são iguais!\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# exemplo de if com operador lógico or\n",
+        "if numero1 > 0 or numero2 < 0:\n",
+        "  print(\"O número 1 é maior que 0, mas o número 2 não é menor que 0\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 176
+        },
+        "id": "PvK1Svy2TdO0",
+        "outputId": "7f03b82d-1928-415f-db00-109abc038b58"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "name 'numero1' is not defined",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipykernel_2306/2237791435.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;31m# exemplo de if com operador lógico or\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0;32mif\u001b[0m \u001b[0mnumero1\u001b[0m \u001b[0;34m>\u001b[0m \u001b[0;36m0\u001b[0m \u001b[0;32mor\u001b[0m \u001b[0mnumero2\u001b[0m \u001b[0;34m<\u001b[0m \u001b[0;36m0\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m   \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"O número 1 é maior que 0, mas o número 2 não é menor que 0\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'numero1' is not defined"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# exemplo de if com operador lógico de NEGAÇÂO\n",
+        "if not numero2 < 0:\n",
+        " print(\"O número 2 é maior que 0\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "q5EvQzQuUbQq",
+        "outputId": "64e55252-b5fd-4021-d3d1-44bb7feadedf"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "O número 2 é maior que 0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# exemplo de if com else\n",
+        "valor1= 3\n",
+        "\n",
+        "if valor1 >= 3:\n",
+        "  print(\"O valor 1 é maior ou igual a 3\")\n",
+        "else:\n",
+        "  print(\"O valor 1 não é maior ou igual a 3\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GlxVhtVeVfSq",
+        "outputId": "7ed6d4cf-17a1-4f53-a3b1-a2e075c55614"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "O valor 1 é maior ou igual a 3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#exemplo de if com elif e else\n",
+        "idade = 61\n",
+        "if idade < 18:\n",
+        "  print(\"Jovem!\")\n",
+        "elif idade >= 18 and idade <= 60:\n",
+        "  print(\"adulto!\")\n",
+        "else:\n",
+        "  print(\"Idoso\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cYgG9yiGWtcn",
+        "outputId": "cd4cd983-f09e-4c1c-8f17-fbd5ba8a2e2a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Idoso\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# exemplo de if abreviado\n",
+        "dia = 10\n",
+        "\n",
+        "if dia == 9: print(\"Hoje é dia 9!\") # apenas if\n",
+        "print(\"Hoje é dia 10!\") if dia == 10 else print(\"Hoje não é dia 10!\")"
+      ],
+      "metadata": {
+        "id": "NxlW0fJBXy69"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# exemplo match/case\n",
+        "opcao = int(input(\"Informe a opção: \"))\n",
+        "match opcao:\n",
+        "  case 1:\n",
+        "    print(\"Falar com atendente\")\n",
+        "  case 2:\n",
+        "    print(\"Dúvidas frequentes\")\n",
+        "  case _:\n",
+        "    print(\"Opção inválida\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 228
+        },
+        "id": "4MU7OjM1Y82O",
+        "outputId": "8d4dde37-699e-43b4-ba59-3bbe03cb8a8b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Informe a opção: \n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "ValueError",
+          "evalue": "invalid literal for int() with base 10: ''",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mValueError\u001b[0m                                Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipykernel_2306/2838379208.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;31m# exemplo match/case\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mopcao\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Informe a opção: \"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m \u001b[0mmatch\u001b[0m \u001b[0mopcao\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m   \u001b[0mcase\u001b[0m \u001b[0;36m1\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m     \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Falar com atendente\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mValueError\u001b[0m: invalid literal for int() with base 10: ''"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# estruturas de repetição\n",
+        "# Exemplo simples de while\n",
+        "contador = 0\n",
+        "\n",
+        "while(contador < 10):\n",
+        "  print(contador)\n",
+        "\n",
+        "  # vamos forçar a parada\n",
+        "  if contador == 4:\n",
+        "    break\n",
+        "\n",
+        "  contador += 1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1Gbk8NVQaU8U",
+        "outputId": "4dedf933-9c02-4d00-8459-ce59eeafb762"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# exemplo de repetição com continue\n",
+        "# pular uma execução\n",
+        "contador = 0\n",
+        "\n",
+        "while (contador < 10):\n",
+        "  contador += 1\n",
+        "\n",
+        "# pular a interação\n",
+        "  if contador == 2:\n",
+        "    continue\n",
+        "\n",
+        "  print(contador)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mefQkF2tcYJR",
+        "outputId": "171c586a-3d30-4213-cf00-f9fffc7baf6f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n",
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# exemplo de while com else\n",
+        "contador = 0\n",
+        "\n",
+        "\n",
+        "while (contador < 10):\n",
+        "  print(contador)\n",
+        "  contador+= 1\n",
+        "else:\n",
+        "  print(\"O contador é maior do que 10\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0xWB3d86eLgT",
+        "outputId": "fceb2b9d-2751-4d24-f907-f63027dc437a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n",
+            "O contador é maior do que 10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# exemplo de lista\n",
+        "lista = [\"Ana, Paula, Mariana\"]\n",
+        "print(type(lista)) # tipo list\n",
+        "\n",
+        "for nome in lista:\n",
+        "  print(nome)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3kSPpj2ophfQ",
+        "outputId": "53283e15-d48e-4407-f52a-8f11bc791b19"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'list'>\n",
+            "Ana, Paula, Mariana\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# exemplo de for em uma string\n",
+        "frase = \"O palmeiras não tem mundial\"\n",
+        "\n",
+        "for c in frase:\n",
+        "  print(c)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9XiFeobbq9Ob",
+        "outputId": "be72bf7e-4fbb-42e9-ee27-d5b2d95f0107"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "O\n",
+            " \n",
+            "p\n",
+            "a\n",
+            "l\n",
+            "m\n",
+            "e\n",
+            "i\n",
+            "r\n",
+            "a\n",
+            "s\n",
+            " \n",
+            "n\n",
+            "ã\n",
+            "o\n",
+            " \n",
+            "t\n",
+            "e\n",
+            "m\n",
+            " \n",
+            "m\n",
+            "u\n",
+            "n\n",
+            "d\n",
+            "i\n",
+            "a\n",
+            "l\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# exemplo de uma lista com for e break\n",
+        "lista = [1,2,3,4,5]\n",
+        "\n",
+        "for num in lista:\n",
+        "  print(num)\n",
+        "\n",
+        "  if num == 3:\n",
+        "    break"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QMqXcvA2sA7i",
+        "outputId": "6c3764a3-212b-4f42-f8dd-ee8b052a29aa"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# exemplo de contagem de qtd de itens na lista\n",
+        "print(len(lista))\n",
+        "\n",
+        "# visualizador de um item escolhido\n",
+        "print(lista[0])\n",
+        "print(lista[-1])\n",
+        "print(lista[:2])\n",
+        "print(lista[2:])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "j8d-A-VMwp6K",
+        "outputId": "6f3ee74b-c588-460a-d716-dd5711c245d2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3\n",
+            "Turvo\n",
+            "Cascavel\n",
+            "['Turvo', 'Londrina, Maringá, Toledo']\n",
+            "['Cascavel']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# exemplo de atualizar valores\n",
+        "lista = [1,2,3,4,5]\n",
+        "print(lista)\n",
+        "lista[0] = 10\n",
+        "print(lista)\n",
+        "\n",
+        "\n",
+        "# exemplo de remover itens\n",
+        "lista.remove(10)\n",
+        "print(lista)\n",
+        "lista.pop(2)\n",
+        "print(lista)\n",
+        "\n",
+        "\n",
+        "# exemplo de limpar a lista\n",
+        "lista.clear()\n",
+        "print(lista)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ua0L3z5AxUh9",
+        "outputId": "75a49a93-e11d-4d90-c47b-71e84d575aef"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 4, 5]\n",
+            "[10, 2, 3, 4, 5]\n",
+            "[2, 3, 4, 5]\n",
+            "[2, 3, 5]\n",
+            "[]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# exemplo de uma ordenação de lista\n",
+        "lista = [\"Matheus\", \"Zeus\", \"Adriano\"]\n",
+        "lista.sort()\n",
+        "print(lista) # crescente/alfabetica\n",
+        "lista.sort(reverse = True)\n",
+        "print(lista)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cAj_y8msy_7K",
+        "outputId": "8fd2efd8-7a48-4519-9e26-1423034a96f4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Adriano', 'Matheus', 'Zeus']\n",
+            "['Zeus', 'Matheus', 'Adriano']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# exemplo de junção de lista\n",
+        "lista1 = [1,2,3]\n",
+        "lista2 = [4,5,6]\n",
+        "lista3 = [7]\n",
+        "\n",
+        "lista_final = lista1 + lista2 + lista3\n",
+        "print(lista_final)\n",
+        "\n",
+        "lista1.extend(lista2)\n",
+        "lista1.extend(lista3)\n",
+        "print(lista1)\n",
+        "\n",
+        "\n",
+        "print(lista1.count(2)) # contagem de itens por valor"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "f95M3yMc0AoT",
+        "outputId": "1340f11c-c1a8-42ec-b1b3-48099175ebb4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 4, 5, 6, 7]\n",
+            "[1, 2, 3, 4, 5, 6, 7]\n",
+            "1\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
